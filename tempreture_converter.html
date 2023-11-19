@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Temperature_converter</title>
+<style>
+	body
+	{
+		background-repeat:no-repeat;
+		background-image:url("temp.jpg");
+		background-color:rgba(201, 76, 76, 0.3);
+		background-size:cover;
+	}
+	[type="button"]
+	{
+		padding:15px 15px 15px 15px;
+		background-color:#c0e3ff;
+		margin-top:25px;
+		margin-left:480px;
+		margin-right:-400px;
+		font-size:22px;
+	}  
+	[type="button"]:hover
+	{
+		background:white;
+		color:red;
+	}
+	header
+	{
+		font-family:serif;
+		font-size:50px;
+		font-weight:bold;
+		color:black;
+		text-align:center;
+		text-decoration:underline;
+		margin-top:10px;
+	}
+	marquee
+	{
+	    font-family:serif;
+		font-size:30px;
+		color:red;
+		margin-top:30%;
+	}
+</style>
+</head>
+<script>
+    function fartocel()
+	{
+		f=prompt('Enter Fahrenheit')
+		c=(f-32)*5/9;
+		document.write('<h1>Celsius is: ',+c);
+	}
+	function celtofar()
+	{
+		c=prompt('Enter Celsius')
+		f=1.8*c+32;
+		document.write('<h1>Fahrenheit is: ',+f);
+	}
+</script>
+<body>
+<header>TEMPERATURE CONVERTER</header>
+<form>
+	<input type="button" value="Fahrenheit to Celsius" onclick="fartocel()">
+	<input type="button" value="Celsius to Fahrenheit" onclick="celtofar()">
+</form>
+<marquee direction='left'>This page is to convert temperature from celcius to fahrenheit and from fahrenheit to celsius.</marquee>
+</body>
+</html>
